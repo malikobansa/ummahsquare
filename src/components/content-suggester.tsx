@@ -31,11 +31,12 @@ const formSchema = z.object({
 });
 
 const themeOptions = [
-    { value: 'Motivation Mondays', label: 'Motivation Mondays' },
-    { value: 'Wisdom Wednesdays', label: 'Wisdom Wednesdays' },
-    { value: 'Feature Fridays', label: 'Feature Fridays' },
-    { value: 'Unity Challenges', label: 'Unity Challenges' },
-    { value: 'Islamic History', label: 'Islamic History' },
+    { value: 'Inspiration', label: 'Inspiration' },
+    { value: 'Knowledge', label: 'Knowledge' },
+    { value: 'Community', label: 'Community' },
+    { value: 'Technology', label: 'Technology' },
+    { value: 'Travel', label: 'Travel & Culture' },
+    { value: 'Health & Wellness', label: 'Health & Wellness' },
 ];
 
 export function ContentSuggester() {

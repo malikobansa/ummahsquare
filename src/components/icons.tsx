@@ -1,6 +1,6 @@
 import type { SVGProps } from 'react';
 
-export const UmmahConnectLogo = (props: SVGProps<SVGSVGElement>) => (
+export const GlobalConnectLogo = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
@@ -11,13 +11,12 @@ export const UmmahConnectLogo = (props: SVGProps<SVGSVGElement>) => (
     strokeLinejoin="round"
     {...props}
   >
-    <title>Ummah Connect Logo</title>
-    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
-    <path d="M12 2c-3.038 0-5.763 1.343-7.583 3.417" />
-    <path d="M22 12c0 3.038-1.343 5.763-3.417 7.583" />
-    <path d="M12 22c3.038 0 5.763-1.343 7.583-3.417" />
-    <path d="M2 12c0-3.038 1.343-5.763 3.417-7.583" />
-    <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" />
+    <title>Global Connect Logo</title>
+    <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Z" />
+    <path d="M2.5 9h19" />
+    <path d="M2.5 15h19" />
+    <path d="M9 2.5a15.5 15.5 0 0 1 6 19" />
+    <path d="M15 2.5a15.5 15.5 0 0 0-6 19" />
   </svg>
 );
 

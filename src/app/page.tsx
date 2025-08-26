@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import {
-  HeartHandshake,
+  Heart,
   Lightbulb,
   Users,
   Twitter,
@@ -17,7 +17,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Badge } from '@/components/ui/badge';
 import { ContentSuggester } from '@/components/content-suggester';
-import { TiktokIcon, UmmahConnectLogo } from '@/components/icons';
+import { TiktokIcon, GlobalConnectLogo } from '@/components/icons';
 import { Separator } from '@/components/ui/separator';
 
 const socialLinks = [
@@ -31,45 +31,45 @@ const socialLinks = [
 
 const weeklyThemes = [
   {
-    value: "motivation",
-    label: "Motivation Mondays",
-    icon: HeartHandshake,
-    description: "Islamic quotes, reminders, and success stories to start the week with inspiration.",
+    value: "inspiration",
+    label: "Inspiration",
+    icon: Heart,
+    description: "Share uplifting quotes, success stories, and motivational content to start the week with a positive mindset.",
     posts: [
-      { title: "Reflections on Patience", image: "https://picsum.photos/600/400?random=1", dataAiHint: "islamic calligraphy" },
-      { title: "The Story of an Ummahpreneur", image: "https://picsum.photos/600/400?random=2", dataAiHint: "muslim entrepreneur" },
-      { title: "A Dua for Strength", image: "https://picsum.photos/600/400?random=3", dataAiHint: "hands praying" },
+      { title: "The Power of Perseverance", image: "https://picsum.photos/600/400?random=1", dataAiHint: "mountain peak" },
+      { title: "Success Story: A Local Entrepreneur", image: "https://picsum.photos/600/400?random=2", dataAiHint: "person smiling" },
+      { title: "A Quote to Brighten Your Day", image: "https://picsum.photos/600/400?random=3", dataAiHint: "sunrise" },
     ],
   },
   {
-    value: "wisdom",
-    label: "Wisdom Wednesdays",
+    value: "knowledge",
+    label: "Knowledge",
     icon: Lightbulb,
-    description: "Knowledge sharing, short lectures, and reflections on the Quran and Hadith.",
+    description: "Exchange knowledge, share interesting facts, and learn something new from the community.",
     posts: [
-      { title: "Understanding Surah Al-Fatiha", image: "https://picsum.photos/600/400?random=4", dataAiHint: "quran book" },
-      { title: "Lessons from the Seerah", image: "https://picsum.photos/600/400?random=5", dataAiHint: "prophets mosque" },
-      { title: "The Science of Hadith", image: "https://picsum.photos/600/400?random=6", dataAiHint: "ancient scrolls" },
+      { title: "Fun Facts About Space", image: "https://picsum.photos/600/400?random=4", dataAiHint: "galaxy stars" },
+      { title: "A Brief History of the Internet", image: "https://picsum.photos/600/400?random=5", dataAiHint: "vintage computer" },
+      { title: "How AI is Changing Our World", image: "https://picsum.photos/600/400?random=6", dataAiHint: "robot human" },
     ],
   },
   {
-    value: "feature",
-    label: "Feature Fridays",
+    value: "community",
+    label: "Community",
     icon: Users,
-    description: "Spotlighting community members, businesses, or important causes.",
+    description: "Spotlighting community members, local events, and important causes from around the world.",
     posts: [
       { title: "Community Spotlight: A Local Hero", image: "https://picsum.photos/600/400?random=7", dataAiHint: "community service" },
-      { title: "Halal Business of the Week", image: "https://picsum.photos/600/400?random=8", dataAiHint: "small business" },
-      { title: "Cause Spotlight: Water for All", image: "https://picsum.photos/600/400?random=9", dataAiHint: "charity work" },
+      { title: "Startup of the Week", image: "https://picsum.photos/600/400?random=8", dataAiHint: "small business" },
+      { title: "Cause Spotlight: Clean Water for All", image: "https://picsum.photos/600/400?random=9", dataAiHint: "charity work" },
     ],
   },
 ];
 
 const userStories = [
-  { name: "Aisha, UK", story: "UmmahSquare helped me connect with fellow designers for a collaborative art project celebrating Islamic heritage. It's a true blessing!", avatar: "https://picsum.photos/100/100?random=10", dataAiHint: "muslim woman" },
-  { name: "Omar, USA", story: "Finding mentors in my field was tough until I joined the platform. The 'Wisdom Wednesdays' are my favorite source of knowledge.", avatar: "https://picsum.photos/100/100?random=11", dataAiHint: "muslim man" },
-  { name: "Fatima, Malaysia", story: "As an entrepreneur, the support from the UmmahSquare community has been invaluable in growing my small business.", avatar: "https://picsum.photos/100/100?random=12", dataAiHint: "asian woman" },
-  { name: "Yusuf, Nigeria", story: "The #4forTheUmmah challenges inspired me to start a local initiative for teaching kids coding. The power of community is real.", avatar: "https://picsum.photos/100/100?random=13", dataAiHint: "african man" },
+  { name: "Anika, Germany", story: "Global Connect helped me find a language exchange partner to practice my French. It's an amazing platform for cultural exchange!", avatar: "https://picsum.photos/100/100?random=10", dataAiHint: "woman smiling" },
+  { name: "Kenji, Japan", story: "Finding collaborators for my open-source project was easy here. The 'Knowledge' section is my favorite source for new ideas.", avatar: "https://picsum.photos/100/100?random=11", dataAiHint: "man glasses" },
+  { name: "Maria, Brazil", story: "As a small business owner, the support from the Global Connect community has been incredible for reaching new customers.", avatar: "https://picsum.photos/100/100?random=12", dataAiHint: "woman entrepreneur" },
+  { name: "David, USA", story: "The community challenges inspired me to start a local cleanup drive in my neighborhood. The power of connection is real.", avatar: "https://picsum.photos/100/100?random=13", dataAiHint: "man outdoors" },
 ];
 
 export default function Home() {
@@ -77,16 +77,16 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-background">
       <header className="container mx-auto px-4 py-8 text-center animate-in fade-in slide-in-from-top-8 duration-1000 ease-out">
         <div className="flex justify-center items-center gap-4">
-          <UmmahConnectLogo className="h-16 w-16 text-primary" />
+          <GlobalConnectLogo className="h-16 w-16 text-primary" />
           <h1 className="text-5xl font-bold font-headline tracking-tight text-foreground">
-            Ummah Connect
+            Global Connect
           </h1>
         </div>
         <p className="mt-4 text-xl text-muted-foreground">
-          Connecting the Ummah in One Platform
+          Connecting People Across The Globe
         </p>
         <div className="mt-6 flex justify-center items-center gap-2">
-          <Badge variant="secondary" className="text-sm">@ummahsquare</Badge>
+          <Badge variant="secondary" className="text-sm">@globalconnect</Badge>
           <Separator orientation="vertical" className="h-6" />
           <div className="flex gap-4">
             {socialLinks.map((social) => (
@@ -103,9 +103,9 @@ export default function Home() {
         <section id="weekly-themes" className="container mx-auto px-4 py-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 ease-out delay-200">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold font-headline">Weekly Themes</h2>
-            <p className="mt-2 text-lg text-muted-foreground">Unity • Knowledge • Community • #4forTheUmmah</p>
+            <p className="mt-2 text-lg text-muted-foreground">Connect • Share • Grow</p>
           </div>
-          <Tabs defaultValue="motivation" className="w-full">
+          <Tabs defaultValue="inspiration" className="w-full">
             <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 h-auto">
               {weeklyThemes.map((theme) => (
                 <TabsTrigger key={theme.value} value={theme.value} className="py-3 flex-col h-auto gap-2">
@@ -147,8 +147,8 @@ export default function Home() {
 
         <section id="user-stories" className="container mx-auto px-4 py-20 animate-in fade-in slide-in-from-bottom-8 duration-1000 ease-out delay-600">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold font-headline">Stories from the Ummah</h2>
-            <p className="mt-2 text-lg text-muted-foreground">Hear from our vibrant community.</p>
+            <h2 className="text-4xl font-bold font-headline">Stories from our Community</h2>
+            <p className="mt-2 text-lg text-muted-foreground">Hear from our vibrant global community.</p>
           </div>
           <Carousel opts={{ loop: true, align: "start" }} className="w-full max-w-5xl mx-auto">
             <CarouselContent>
@@ -184,8 +184,8 @@ export default function Home() {
       <footer className="bg-card border-t mt-16">
         <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
           <div className="flex items-center gap-2">
-            <UmmahConnectLogo className="h-8 w-8 text-primary" />
-            <p className="font-semibold text-foreground">Ummah Connect</p>
+            <GlobalConnectLogo className="h-8 w-8 text-primary" />
+            <p className="font-semibold text-foreground">Global Connect</p>
           </div>
           <div className="flex gap-4 my-4 md:my-0">
             {socialLinks.map((social) => (
@@ -195,7 +195,7 @@ export default function Home() {
               </Link>
             ))}
           </div>
-          <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} UmmahSquare. All rights reserved.</p>
+          <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} Global Connect. All rights reserved.</p>
         </div>
       </footer>
     </div>
