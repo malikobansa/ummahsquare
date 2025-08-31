@@ -28,7 +28,7 @@ const prompt = ai.definePrompt({
   name: 'suggestWeeklyPostTopicsPrompt',
   input: {schema: SuggestWeeklyPostTopicsInputSchema},
   output: {schema: SuggestWeeklyPostTopicsOutputSchema},
-  prompt: `You are a social media manager for a global social media platform called Global Connect. Suggest 5 post topics based on the following weekly theme:\n\n{{weeklyTheme}}\n\nMake the topics engaging and relevant to a diverse, global community. Return the post topics as a JSON array of strings.`,
+  prompt: `You are a social media manager for a social media platform for Muslims called UmmahSquare. Suggest 5 post topics based on the following weekly theme:\n\n{{weeklyTheme}}\n\nMake the topics engaging and relevant to a global Muslim community. Return the post topics as a JSON array of strings.`,
 });
 
 const suggestWeeklyPostTopicsFlow = ai.defineFlow(

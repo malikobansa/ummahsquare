@@ -31,12 +31,12 @@ const formSchema = z.object({
 });
 
 const themeOptions = [
-    { value: 'Inspiration', label: 'Inspiration' },
-    { value: 'Knowledge', label: 'Knowledge' },
-    { value: 'Community', label: 'Community' },
-    { value: 'Technology', label: 'Technology' },
-    { value: 'Travel', label: 'Travel & Culture' },
-    { value: 'Health & Wellness', label: 'Health & Wellness' },
+    { value: 'Faith & Reflection', label: 'Faith & Reflection' },
+    { value: 'Knowledge & Learning', label: 'Knowledge & Learning' },
+    { value: 'Community & Culture', label: 'Community & Culture' },
+    { value: 'Islamic History', label: 'Islamic History' },
+    { value: 'Halal Lifestyle', label: 'Halal Lifestyle' },
+    { value: 'Family & Parenting', label: 'Family & Parenting' },
 ];
 
 export function ContentSuggester() {
@@ -74,7 +74,7 @@ export function ContentSuggester() {
         <Wand2 className="mx-auto h-12 w-12 text-accent mb-4" />
         <h2 className="text-4xl font-bold font-headline">AI-Powered Content Creation</h2>
         <p className="mt-2 text-lg text-muted-foreground">
-          Never run out of ideas. Generate engaging post topics for any theme.
+          Never run out of ideas. Generate engaging post topics for our community.
         </p>
       </div>
 

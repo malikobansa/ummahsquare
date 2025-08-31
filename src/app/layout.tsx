@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Global Connect',
-  description: 'Connecting People Across The Globe.',
+  title: 'UmmahSquare',
+  description: 'Connecting the global Muslim community.',
 };
 
 export default function RootLayout({
