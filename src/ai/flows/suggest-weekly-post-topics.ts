@@ -28,7 +28,13 @@ const prompt = ai.definePrompt({
   name: 'suggestWeeklyPostTopicsPrompt',
   input: {schema: SuggestWeeklyPostTopicsInputSchema},
   output: {schema: SuggestWeeklyPostTopicsOutputSchema},
-  prompt: `You are a social media manager for a social media platform for Muslims called UmmahSquare. Suggest 5 post topics based on the following weekly theme:\n\n{{weeklyTheme}}\n\nMake the topics engaging and relevant to a global Muslim community. Return the post topics as a JSON array of strings.`,
+  prompt: `You are a social media manager for an online platform for Muslims called UmmahSquare. Your goal is to foster a sense of community and faith.
+
+Suggest 5 engaging post topics based on the following weekly theme:
+
+"{{weeklyTheme}}"
+
+The topics should be inspiring, educational, and relevant to a diverse, global Muslim audience. Frame them in a way that encourages interaction and sharing.`,
 });
 
 const suggestWeeklyPostTopicsFlow = ai.defineFlow(

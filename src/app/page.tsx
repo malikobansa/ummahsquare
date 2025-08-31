@@ -34,33 +34,33 @@ const weeklyThemes = [
     value: "faith",
     label: "Faith & Reflection",
     icon: Heart,
-    description: "Share inspiring verses, hadith, and stories to strengthen our connection with our faith.",
+    description: "Share inspiring verses from the Qur'an, Hadith, and stories of the Prophets to strengthen our connection with Allah.",
     posts: [
-      { title: "The Beauty of Patience in Islam", image: "https://picsum.photos/600/400?random=1", dataAiHint: "mosque silhouette" },
-      { title: "Story of a Companion", image: "https://picsum.photos/600/400?random=2", dataAiHint: "ancient manuscript" },
-      { title: "A Verse to Reflect Upon", image: "https://picsum.photos/600/400?random=3", dataAiHint: "person praying" },
+      { title: "The Power of Dua", image: "https://picsum.photos/600/400?random=1", dataAiHint: "hands praying" },
+      { title: "Lessons from Surah Yusuf", image: "https://picsum.photos/600/400?random=2", dataAiHint: "ancient quran" },
+      { title: "A Hadith on Kindness", image: "https://picsum.photos/600/400?random=3", dataAiHint: "mosque interior" },
     ],
   },
   {
     value: "knowledge",
     label: "Knowledge & Learning",
     icon: Lightbulb,
-    description: "Exchange knowledge on Islamic history, sciences, and arts.",
+    description: "Exchange knowledge on Islamic history, the contributions of Muslim scholars, and the beauty of Islamic arts.",
     posts: [
-      { title: "Islamic Golden Age Inventions", image: "https://picsum.photos/600/400?random=4", dataAiHint: "astrolabe artifact" },
-      { title: "The Art of Arabic Calligraphy", image: "https://picsum.photos/600/400?random=5", dataAiHint: "calligraphy art" },
-      { title: "Understanding Islamic Finance", image: "https://picsum.photos/600/400?random=6", dataAiHint: "modern city" },
+      { title: "Innovations from the Islamic Golden Age", image: "https://picsum.photos/600/400?random=4", dataAiHint: "astrolabe artifact" },
+      { title: "The Mastery of Islamic Calligraphy", image: "https://picsum.photos/600/400?random=5", dataAiHint: "islamic calligraphy" },
+      { title: "Principles of Islamic Finance", image: "https://picsum.photos/600/400?random=6", dataAiHint: "islamic architecture" },
     ],
   },
   {
     value: "community",
     label: "Community & Culture",
     icon: Users,
-    description: "Showcasing the diversity of Muslim communities, cultures, and events from around the world.",
+    description: "Showcasing the rich diversity of Muslim cultures, traditions, and community events from across the globe.",
     posts: [
-      { title: "Eid Celebrations in Morocco", image: "https://picsum.photos/600/400?random=7", dataAiHint: "moroccan festival" },
-      { title: "Halal Food Bazaar", image: "https://picsum.photos/600/400?random=8", dataAiHint: "food market" },
-      { title: "Spotlight: A Muslim Entrepreneur", image: "https://picsum.photos/600/400?random=9", dataAiHint: "person smiling" },
+      { title: "Eid Celebrations in Malaysia", image: "https://picsum.photos/600/400?random=7", dataAiHint: "malaysian mosque" },
+      { title: "A Taste of a Ramadan Iftar", image: "https://picsum.photos/600/400?random=8", dataAiHint: "iftar meal" },
+      { title: "Spotlight: A Muslim Philanthropist", image: "https://picsum.photos/600/400?random=9", dataAiHint: "community gathering" },
     ],
   },
 ];
@@ -147,8 +147,8 @@ export default function Home() {
 
         <section id="user-stories" className="container mx-auto px-4 py-20 animate-in fade-in slide-in-from-bottom-8 duration-1000 ease-out delay-600">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold font-headline">Stories from our Community</h2>
-            <p className="mt-2 text-lg text-muted-foreground">Hear from our vibrant global Ummah.</p>
+            <h2 className="text-4xl font-bold font-headline">Stories from our Ummah</h2>
+            <p className="mt-2 text-lg text-muted-foreground">Hear from our vibrant global community.</p>
           </div>
           <Carousel opts={{ loop: true, align: "start" }} className="w-full max-w-5xl mx-auto">
             <CarouselContent>
