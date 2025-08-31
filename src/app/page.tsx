@@ -12,7 +12,7 @@ import {
 } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Badge } from '@/components/ui/badge';
@@ -76,12 +76,14 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <header className="container mx-auto px-4 py-8 text-center animate-in fade-in slide-in-from-top-8 duration-1000 ease-out">
-        <div className="flex justify-center items-center gap-4">
-          <UmmahSquareLogo className="h-16 w-16 text-primary" />
-          <h1 className="text-5xl font-bold font-headline tracking-tight text-foreground">
-            UmmahSquare
-          </h1>
-        </div>
+        <Link href="/" className="inline-block">
+          <div className="flex justify-center items-center gap-4">
+            <UmmahSquareLogo className="h-16 w-16 text-primary" />
+            <h1 className="text-5xl font-bold font-headline tracking-tight text-foreground">
+              UmmahSquare
+            </h1>
+          </div>
+        </Link>
         <p className="mt-4 text-xl text-muted-foreground">
           Connecting the Global Muslim Community
         </p>
@@ -119,21 +121,23 @@ export default function Home() {
                 <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">{theme.description}</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {theme.posts.map((post) => (
-                    <Card key={post.title} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border-2 border-transparent hover:border-primary">
-                      <CardHeader className="p-0">
-                        <Image
-                          src={post.image}
-                          alt={post.title}
-                          width={600}
-                          height={400}
-                          className="w-full h-48 object-cover"
-                          data-ai-hint={post.dataAiHint}
-                        />
-                      </CardHeader>
-                      <CardContent className="p-4">
-                        <h3 className="text-lg font-semibold">{post.title}</h3>
-                      </CardContent>
-                    </Card>
+                    <Link key={post.title} href="/news" className="block">
+                      <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border-2 border-transparent hover:border-primary h-full">
+                        <CardHeader className="p-0">
+                          <Image
+                            src={post.image}
+                            alt={post.title}
+                            width={600}
+                            height={400}
+                            className="w-full h-48 object-cover"
+                            data-ai-hint={post.dataAiHint}
+                          />
+                        </CardHeader>
+                        <CardContent className="p-4">
+                          <h3 className="text-lg font-semibold">{post.title}</h3>
+                        </CardContent>
+                      </Card>
+                    </Link>
                   ))}
                 </div>
               </TabsContent>
@@ -154,24 +158,26 @@ export default function Home() {
             <CarouselContent>
               {userStories.map((story, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1 h-full">
-                    <Card className="h-full flex flex-col justify-between p-6 shadow-lg">
-                      <CardContent className="p-0 flex-grow">
-                        <blockquote className="text-base italic text-foreground">"{story.story}"</blockquote>
-                      </CardContent>
-                      <div className="mt-4 flex items-center gap-4">
-                        <Image
-                          src={story.avatar}
-                          alt={story.name}
-                          width={48}
-                          height={48}
-                          className="rounded-full"
-                          data-ai-hint={story.dataAiHint}
-                        />
-                        <p className="font-semibold text-primary">{story.name}</p>
-                      </div>
-                    </Card>
-                  </div>
+                  <Link href="/news" className="block h-full">
+                    <div className="p-1 h-full">
+                      <Card className="h-full flex flex-col justify-between p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border-2 border-transparent hover:border-primary">
+                        <CardContent className="p-0 flex-grow">
+                          <blockquote className="text-base italic text-foreground">"{story.story}"</blockquote>
+                        </CardContent>
+                        <div className="mt-4 flex items-center gap-4">
+                          <Image
+                            src={story.avatar}
+                            alt={story.name}
+                            width={48}
+                            height={48}
+                            className="rounded-full"
+                            data-ai-hint={story.dataAiHint}
+                          />
+                          <p className="font-semibold text-primary">{story.name}</p>
+                        </div>
+                      </Card>
+                    </div>
+                  </Link>
                 </CarouselItem>
               ))}
             </CarouselContent>
@@ -183,10 +189,10 @@ export default function Home() {
 
       <footer className="bg-card border-t mt-16">
         <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-          <div className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2">
             <UmmahSquareLogo className="h-8 w-8 text-primary" />
             <p className="font-semibold text-foreground">UmmahSquare</p>
-          </div>
+          </Link>
           <div className="flex gap-4 my-4 md:my-0">
             {socialLinks.map((social) => (
               <Link key={social.name} href={social.href} target="_blank" rel="noopener noreferrer">
