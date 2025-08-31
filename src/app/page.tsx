@@ -8,7 +8,7 @@ import {
   Linkedin,
   Instagram,
   Facebook,
-  MessageCircle as WhatsappIcon,
+  MessageCircle,
 } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
@@ -26,7 +26,7 @@ const socialLinks = [
   { icon: Instagram, href: '#', name: 'Instagram' },
   { icon: Facebook, href: '#', name: 'Facebook' },
   { icon: TiktokIcon, href: '#', name: 'TikTok' },
-  { icon: WhatsappIcon, href: '#', name: 'WhatsApp' },
+  { icon: MessageCircle, href: '#', name: 'WhatsApp' },
 ];
 
 const weeklyThemes = [
